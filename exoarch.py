@@ -83,9 +83,9 @@ class ExoplanetArchiveCatalog(Catalog):
 
     def __init__(self, name=None, **kwargs):
         if name is not None:
-            self._name = name
+            self.name = name
         else:
-            self._name = self.name
+            self.name = self.name
         super(ExoplanetArchiveCatalog, self).__init__(**kwargs)
 
     @property
