@@ -16,6 +16,7 @@ from six.moves import urllib
 
 __all__ = [
     "KOICatalog", "KICatalog", "CumulativeCatalog",
+    "K2TargetsCatalog", "K2CandidatesCatalog",
 ]
 
 EXOARCH_DATA_DIR = os.environ.get(
@@ -131,6 +132,14 @@ class KICatalog(ExoplanetArchiveCatalog):
 
 class CumulativeCatalog(ExoplanetArchiveCatalog):
     name = "cumulative"
+
+
+class K2TargetsCatalog(ExoplanetArchiveCatalog):
+    name = "k2targets"
+
+
+class K2CandidatesCatalog(ExoplanetArchiveCatalog):
+    name = "k2candidates"
 
 
 class CatalogDownloadError(Exception):
